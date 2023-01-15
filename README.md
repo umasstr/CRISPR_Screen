@@ -1,7 +1,7 @@
 # CRISPR_Screen
 ## CRISPRi/a/ko Screen Data Generation Tips
 
-Most sgRNA libraries are housed in the LentiCRISPRv1 or v2 backbones. 
+Most sgRNA libraries are housed in the LentiCRISPRv1 or [v2]([url](https://www.addgene.org/52961/)) backbones. 
 
 i.	Guides are inserted into typeIIS restriction sites (see below) downstream of U6
 
@@ -17,19 +17,17 @@ iv.	Primers contain the whole illumina adapter needed for sequencing.
   
 - The P7 primer (rev) contains the barcode (index 1). 
 
-![image](https://user-images.githubusercontent.com/44478133/212573924-4ec7a005-01c6-497d-bdc0-5c92a23f7b2f.png)
+![image](https://user-images.githubusercontent.com/44478133/212574320-24e673d2-4d31-4aec-940e-e88047356da3.png)
 
 v.	I recommend using a Nextseq 500/550 75-cycle high-output kit (or NextSeq 2000 P3 50 cycle kit) for sequencing multiple libraries. Minimum coverage should == #guides x 200. Allocate cycles as 75 | 8 | 0 | 0 (R1 | I1 |I2 |R2). You’re only sequencing from P5 on the U6 end. 
 
 vi.	Run sequencer in Manual mode, opting for monitoring AND storage on basespace. Upload a sample sheet saved as CSV. Sheet below corresponds to primers above. Experiment name should be unique—you’ll need this to download your FASTQs
 
-
-
-![image](https://user-images.githubusercontent.com/44478133/212573949-8bce8c01-f5fb-4d18-817d-a7f7ca2743de.png)
+![image](https://user-images.githubusercontent.com/44478133/212574367-89777e3d-237a-4fda-992b-55169fa2c355.png)
 
 ## CRISPR Library Data Analysis
 
-Consult the relevant publicatioin before processing to see whether your libraries are compatible with MAGeCK. It should work with all the lenti backbones. It has a published protocol, but I don’t find it particularly helpful. 
+Consult the relevant publicatioin before processing to see whether your libraries are compatible with [MAGeCK]([url](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0554-4)). It should work with all the lenti backbones. It has a published [protocol]([url](https://www.nature.com/articles/s41596-018-0113-7)), but I don’t find it particularly helpful. 
 
 1.	You need a 3-column sgRNA library table. ID should be unique. Check the supplementary information of the article describing your library. They should have a table like this. Get these three columns, name the columns, save as “library.csv” and upload to the cluster.
 
@@ -43,7 +41,7 @@ Consult the relevant publicatioin before processing to see whether your librarie
 bsub -n 15 -R "span[hosts=1]" -R "rusage[mem=2048]" -W 4:00 -q interactive -Is bash
 ```
 
-3.	Get your sequencing data onto the cluster. I recommend the illumina commandline uitility. Follow setup instructions if first time. Find your project and download.
+3.	Get your sequencing data onto the cluster. I recommend the illumina commandline uitility. Follow [setup instructions]([url](https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview)) if first time. Find your project and download.
 
 ```
 #Find your project and id. It’s the experiment name above
