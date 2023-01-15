@@ -1,4 +1,4 @@
-# CRISPR_Screen
+# CRISPR_Screen Instructions, UMass Cluster
 ## CRISPRi/a/ko Screen Data Generation Tips
 
 Most sgRNA libraries are housed in the LentiCRISPRv1 or [v2]([url](https://www.addgene.org/52961/)) backbones. 
