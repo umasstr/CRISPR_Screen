@@ -21,7 +21,7 @@ iv.	Primers contain the whole illumina adapter needed for sequencing.
 
 v.	I recommend using a Nextseq 500/550 75-cycle high-output kit (or NextSeq 2000 P3 50 cycle kit) for sequencing multiple libraries. Minimum coverage should == #guides x 200. Allocate cycles as 75 | 8 | 0 | 0 (R1 | I1 |I2 |R2). You’re only sequencing from P5 on the U6 end. 
 
-vi.	Run sequencer in Manual mode, opting for monitoring AND storage on basespace. Upload a sample sheet saved as CSV. Sheet below corresponds to primers above. Experiment name should be unique—you’ll need this to download your FASTQs
+vi.	Run sequencer in Manual mode, opting for monitoring AND storage on basespace. Upload a sample sheet saved as CSV (below is for Nextseq 500/550, Miniseq. Nextseq 2000 has different sample sheets). Sheet below corresponds to primers above. Experiment name should be unique—you’ll need this to download your FASTQs
 
 ![image](https://user-images.githubusercontent.com/44478133/212574367-89777e3d-237a-4fda-992b-55169fa2c355.png)
 
